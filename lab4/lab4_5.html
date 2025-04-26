@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2411849 이빛찬란</title>
+</head>
+<body>
+   <h1 id="result"></h1>
+    <script>
+        const week=["월", "화", "수", "목", "금", "토","일"];
+        let del_value=week.splice(5,2)
+        document.getElementById("result").innerHTML = `
+            삭제한 값:${del_value}<br>
+            삭제 이후 결과:${week}<br>
+            
+        `;
+
+    </script>
+    
+</body>
+</html>

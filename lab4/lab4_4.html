@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2411849 이빛찬란</title>
+</head>
+<body>
+    <div id="demo" style="font-weight: bold; font-size:50px"></div>
+    <script>
+        let num=prompt("카운트다운할 숫자를 입력하세요.")
+        num=Number(num);
+        
+        const countdown = () => {
+            document.getElementById("demo").innerHTML = num;
+            if (num <= 0) {
+                clearInterval(timer);
+                document.getElementById("demo").innerHTML = "타이머 종료";
+            }
+            num--;
+        };
+        const timer = setInterval(countdown, 1000);
+    </script>
+    
+</body>
+</html>

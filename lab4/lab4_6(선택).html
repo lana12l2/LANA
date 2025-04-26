@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택과제</title>
+</head>
+<body>
+    <h1><span id="name"></span><br>D+<span id="count"></span></h1>
+    <script>
+        let d_day = prompt("D-day 이름을 입력하시오");
+        let d_day_date = prompt("D-day 날짜를 입력하시오 (YYYY-MM-DD)");
+
+        let now = new Date();
+        let targetDate = new Date(d_day_date);
+
+        let tonow = now - targetDate;
+        let passedtime = Math.floor(tonow / (1000 * 60 * 60 * 24))+1;
+
+        document.getElementById("name").innerHTML = d_day;
+        document.getElementById("count").innerHTML = passedtime;
+    </script>
+</body>
+</html>

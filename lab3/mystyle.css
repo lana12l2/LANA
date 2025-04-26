@@ -1,0 +1,164 @@
+/* 전체 기본 설정 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #fefefe;
+  }
+  
+  
+  #top_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: pink;
+    padding: 10px 20px;
+  }
+  
+  #title {
+    margin: 0;
+    width:500px;
+    padding:10px;
+  }
+  
+  .container {
+   margin:0px;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10;
+  }
+  
+  .nav-item {
+    position: relative;
+    margin-left: 20px;
+  }
+  
+  .nav-link {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+   .nav-item  a{
+    
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+
+   } 
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    z-index: 1000;
+  }
+  
+  .nav-item:hover .submenu {
+    display: block;
+  }
+  
+  .submenu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .submenu a:hover {
+    background-color: black;
+    color: white;
+  }
+  
+ 
+  main {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  
+  #login {
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
+    border: 5px solid lightpink;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  
+  #post {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+  
+  /* 카드 스타일 */
+  .card {
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+    border: 5px solid lightpink;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  .card img {
+    width: 250px;
+    height: auto;
+  }
+  
+  
+  #ad {
+    width: 200px;
+    margin-left: 10px;
+  }
+  
+  #ad article {
+    background-color: beige;
+    border: 2px solid lightpink;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #ad img {
+    display: block;
+    margin: 10px auto;
+  }
+  
+  
+  footer {
+    background-color: lightpink;
+    padding: 15px 0;
+  }
+  
+  footer nav ul {
+    display: flex;
+    justify-content: space-around;
+   
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  footer nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    
+  }
+  

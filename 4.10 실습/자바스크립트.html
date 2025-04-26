@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<div id="result"></div>
+<script>
+    name=prompt("이름을 입력하시오.");
+    rs=confirm("당신의 이름은"+name+"입니까?");
+    if (rs==True){
+        document.getElementById("result").innerHTML="환영합니다."+name+"님!";
+    }
+    else{
+        document.getElementById("result").innerHTML="다시 입력해주세요"+name+"님!";
+    }
+    function test(){
+        if(1==1){
+            var a=1;
+            let b=2;
+
+        }
+        console.log(a);
+        colsole.log(b);
+    }
+</script>
+
+</body>
+</html>
