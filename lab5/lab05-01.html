@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2411849 이빛찬란</title>
+    <style>
+        *{
+            margin: 0 auto;
+            line-height: 3em;
+        }
+        body{
+            width: 300px;
+        }
+        select{
+            height: 30px;
+            font-size: 1.2em;
+        }
+        div{
+            width: 200px; height: 200px;
+            background-color: rgb(31, 192, 232);
+            color: white;
+            line-height:200px;
+            text-align:center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>DOM 실습</h1>
+        <label>텍스트 내용 입력 <input type="text" id="t"></label><br>
+        <label>배경색 <input type="color" id="bgcolor" value="#0000ff"></label><br>
+        <label>글자색 <input type="color" id="fcolor" value="#ffffff"></label><br>
+        <label>글자크기 <select id="fsize">
+            <option value="10px">10</option>
+            <option value="15px">15</option>
+            <option value="20px">20</option>
+            <option value="25px">25</option>
+            <option value="30px">30</option>
+            </select>
+        </label><br> 
+        <label><input type="radio" name="shape" value="circle" class="shape">원</label> &nbsp;&nbsp;
+        <label><input type="radio" name="shape" value="square" class="shape" checked>사각형</label>&nbsp;&nbsp;
+        <label><input type="radio" name="shape" value="round" class="shape">모서리가 둥근 사각형</label>
+        <div id="rs">텍스트 내용</div>
+    </form>
+    <script>
+        const inputText=document.getElementById("t");
+        inputText.addEventListener("blur",myfunction);
+        function myfunction(){
+            const rs=document.getElementById("rs");
+            rs.innerHTML=inputText.value;
+        }
+
+        const inputBgcolor=document.getElementById("bgcolor");
+        inputBgcolor.addEventListener("change",myfunction2);
+        function myfunction2(){
+            const rs=document.getElementById("rs");
+            rs.style.backgroundColor=inputBgcolor.value;
+        }
+        const inputFcolor=document.getElementById("fcolor");
+        inputFcolor.addEventListener("change",myfunction3);
+        function myfunction3(){
+            const rs=document.getElementById("rs");
+            rs.style.color=inputFcolor.value;
+        }
+        const fontSize=document.getElementById("fsize");
+        fontSize.addEventListener("change",myfunction4);
+        function myfunction4(){
+            const rs=document.getElementById("rs");
+            rs.style.fontSize=fontSize.options[fontSize.selectedIndex].value;
+        }
+        const shapes = document.getElementsByClassName("shape");
+        for (let i = 0; i < shapes.length; i++) {
+        shapes[i].addEventListener("change", function() {
+            const selectedShape = document.querySelector('input[name="shape"]:checked').value;
+            if (selectedShape === "circle") {
+                rs.style.borderRadius = "50%";
+            } else if (selectedShape === "square") {
+                rs.style.borderRadius = "0";
+            } else if (selectedShape === "round") {
+                rs.style.borderRadius = "30px";
+            }
+        });
+    }
+
+</script>
+</body>
+</html>

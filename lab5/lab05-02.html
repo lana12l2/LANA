@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2411849 이빛찬란</title>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <h4>
+        해야 할 일을 기록해 보세요.<br>
+        할 일이 끝난 일은 선택하면 취소선이 그어지도록 합니다.<br>
+        목록의 우측에 있는 x버튼을 누르면 해당 항목이 삭제되도록 합니다.
+    </h4>
+    <input type="text" id="subject">
+    <button id="add" onclick="addList();">추가</button>
+    <ul id="mylist"></ul>
+
+    <script>
+        function addList() {
+            var subject = document.querySelector("#subject");
+            var inputText = subject.value;
+            if (inputText === "") return;
+            var list = document.createElement("li");
+            var newlist = document.createElement("span"); //span해서 문자열만 li에 추가
+            newlist.textContent = inputText;
+            list.appendChild(newlist);
+            list.addEventListener("click", function () {
+                newlist.style.textDecoration = "line-through";
+                });
+
+            var closeBtn = document.createElement("span");
+            closeBtn.textContent = "x";
+            closeBtn.style.marginLeft = "30px";
+            closeBtn.style.cursor = "pointer";
+            closeBtn.onclick = function(event) {
+                event.stopPropagation(); // li 클릭 이벤트 방지
+                list.remove();
+            };
+            list.appendChild(closeBtn);
+
+            var mylist = document.querySelector("#mylist");
+            mylist.appendChild(list);
+            subject.value = "";
+        }
+    </script>
+</body>
+</html>
