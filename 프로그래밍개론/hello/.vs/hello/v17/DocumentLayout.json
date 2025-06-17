@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2023user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uD504\uB85C\uADF8\uB798\uBC0D\uAC1C\uB860\\hello\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FDE1D7E2-CF8C-42D7-ABD9-9C1F2DBB415C}|hello.vcxproj|C:\\Users\\2023user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uD504\uB85C\uADF8\uB798\uBC0D\uAC1C\uB860\\hello\\hello.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FDE1D7E2-CF8C-42D7-ABD9-9C1F2DBB415C}|hello.vcxproj|solutionrelative:hello.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "hello.c",
+              "DocumentMoniker": "C:\\Users\\2023user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uD504\uB85C\uADF8\uB798\uBC0D\uAC1C\uB860\\hello\\hello.c",
+              "RelativeDocumentMoniker": "hello.c",
+              "ToolTip": "C:\\Users\\2023user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uD504\uB85C\uADF8\uB798\uBC0D\uAC1C\uB860\\hello\\hello.c",
+              "RelativeToolTip": "hello.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-09-04T04:52:36.485Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+﻿  6주차.c
+C:\Users\2023user\OneDrive\바탕 화면\프로그래밍개론\6주차 실습\6주차.c(1,9): warning C4005: '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
+      C:\Users\2023user\OneDrive\바탕 화면\프로그래밍개론\6주차 실습\6주차.c(1,9):
+      이전에 명령줄에서 선언된 '_CRT_SECURE_NO_WARNINGS'
+  
+  6주차 실습.vcxproj -> C:\Users\2023user\OneDrive\바탕 화면\프로그래밍개론\6주차 실습\x64\Debug\6주차 실습.exe

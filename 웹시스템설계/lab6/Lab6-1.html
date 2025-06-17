@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2411849 이빛찬란</title>
+    <script>
+    function GetCookie(name) {
+      let pairs=document.cookie.split(";");
+      for (let i=0;i<pairs.length;i++){
+        let pair=pairs[i].trim();
+        let unit=pair.split("=");
+        if(unit[0]==name){
+          return unescape(unit[1]);
+        }
+      }
+      return null;
+    }
+    // 쿠키 설정 함수
+    function SetCookie(name, value, expireDate) {
+      let cookieStr=name+'='+escape(value)+((expireDate==null)?'':(';expires='+expireDate.toUTCString()));
+      document.cookie=cookieStr;
+    }
+    </script>
+    
+    <style>
+        .popup{
+            position:fixed;
+            width:600px;
+            height:500px;
+            z-index:20;
+            box-shadow: 20px 20px 20px rgba(0,0,0,0.5);
+            display: block;
+            top: 30%;
+            left: 30%;
+            background-color: white;
+        }
+        img{
+            width:300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>쿠키 테스트 하기</h1>
+    <hr>
+    <div>본문 내용 영역</div>
+    <div class="popup">
+        <div class="popup_contents">
+            !!듀 가나디 팝업이 진행됩니다!!<br>
+            <img src="가나디.jpg" alt="가나디 이미지">
+        </div>
+        <div class="btn">
+            <!--오늘 하루 보지 않기버튼+ 함수 연결, close버튼 추가. 함수 연결-->
+            <button id="today" onclick="setTodayCookie()">오늘 하루 보지 않기</button>
+            <button id="close" onclick="closepopup()">close</button>
+        </div>
+    </div>
+    <script>
+        if (GetCookie('today')=='yes'){
+            closepopup();
+        }
+        let username=GetCookie('username');
+        let count=GetCookie('count');
+
+        let expire=new Date(); //현재시간
+        //쿠키 만료시간 1일로 설정
+        if(username==null){
+            count=0;
+            username=prompt('이름을 입력하세요','');
+            if(username==null){
+                alert('이름을 입력하시면 보다 나은 서비스를 제공받을 수 있습니다.');
+                username='눈송이';
+            }
+            else{
+                expire.setTime(expire.getTime()+(24 * 60 * 60 * 1000));
+                SetCookie('username',username,expire);
+            }
+        }
+        count++;
+        expire.setTime(expire.getTime()+(24*60*60*1000));
+        SetCookie('count',count,expire);
+        document.write("<p>어서오십시오."+username+"님의"+count+"번째 방문을 환영합니다.");
+
+        //오늘하루 보지않기 기능 실행용함수
+        function setTodayCookie() {
+                let today=GetCookie('today');
+                if(today=='yes'){
+                    closepopup();
+                }
+                else{
+                    expire.setTime(expire.getTime()+(24*60*60*1000));
+                    SetCookie('today','yes',expire);
+                }
+        }
+
+        function closepopup(){
+            document.querySelector('.popup').style.display='none';
+        }
+
+       
+
+    </script>
+</body>
+</html>
